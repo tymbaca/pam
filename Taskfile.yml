@@ -1,0 +1,13 @@
+version: 3
+
+vars:
+  APP: pam
+
+tasks:
+  default:
+    silent: true
+    cmds:
+      - go build -o {{.APP}} .
+      - ./{{.APP}} {{.CLI_ARGS}}
+      # - rm ./{{.APP}}
+    
